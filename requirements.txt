@@ -1,6 +1,4 @@
 pandas
-pickle
 ydata_profiling
-apyori
 streamlit
 mlxtend
