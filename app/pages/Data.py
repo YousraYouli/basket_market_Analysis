@@ -8,10 +8,10 @@ from wordcloud import WordCloud
 from mlxtend.preprocessing import TransactionEncoder
 
 # import matplotlib.pyplot as plt
-import path
+# import path
 
-dir = path.Path(__file__).abspath()
-sys.append.path(dir.parent.parent)
+# dir = path.Path(__file__).abspath()
+# sys.append.path(dir.parent.parent)
 
 
 st.set_page_config(page_title='Data Preprocessing',
