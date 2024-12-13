@@ -22,9 +22,9 @@ def load_csv_data(path):
         except FileNotFoundError:
             st.error("Error: dataset not found. Please ensure the file is present in the 'data' folder.")
             return None 
-st.session_state.data = load_csv_data("data\\train_data.csv")
+st.session_state.train_data = load_csv_data("data\\train_data.csv")
 
-items_list = st.session_state.data.columns.tolist()
+items_list = st.session_state.train_data.columns.tolist()
 
 
 with tab1 :
@@ -111,7 +111,27 @@ with tab2 :
         """,
         unsafe_allow_html=True,
         )
-    if st.button("Predict"):
-        st.write("Recommended items:", recommendations)
+    if st.button("Recommend"):
+        # st.write("Recommended items:", recommendations)
+
+         # Display the recommendations as a bullet list
+        # for idx, item in enumerate(recommendations):
+        #     item_str = ', '.join(list(item))
+        #     st.markdown(f"- {item_str}")
+
+        # Convert the frozensets into a list of strings
+        item_strings = [', '.join(list(item)) for item in recommendations]
+        # Create a DataFrame to display as a table
+        df = pd.DataFrame(item_strings, columns=["Recommended Items"])
+        # Display the DataFrame in Streamlit
+        st.markdown("### Recommended Items Table:")
+        st.table(df)
+
+        # Display the recommendations with checkboxes
+        # st.markdown("### Recommended Items with Checkboxes:")
+        # for idx, item in enumerate(recommendations):
+        #     item_str = ', '.join(list(item))
+        #     if st.checkbox(f"Select {item_str}", key=idx):
+        #         st.write(f"You selected: {item_str}")
 
 
