@@ -1,4 +1,5 @@
 import streamlit as st
+import os 
 
 st.set_page_config(page_title='home',
                    page_icon='👋',
@@ -30,4 +31,6 @@ st.markdown("""
 #          :blue[Apriori ,FP-GROWTH, ECLAT] and we had a diffrenet result , the best model
 #          using blue:[performance evaluation] is **XXX algorihtm** ''')
 
-st.image("C:\Users\Soso\Desktop\ML_miniprojet\ML_mini_projet\app\figures1.png")
+data_filepath = os.path.join('.', 'figures','1.png')
+st.image(data_filepath)
+# st.image("C:\Users\Soso\Desktop\ML_miniprojet\ML_mini_projet\app\figures1.png")
