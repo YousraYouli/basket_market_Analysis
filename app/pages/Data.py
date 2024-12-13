@@ -17,7 +17,7 @@ def load_data(filepath):
 # Load the data and store it in session_state
 try:
     if "data" not in st.session_state:
-        data_filepath = r'C:\Users\Soso\Desktop\ML_miniprojet\ML_mini_projet\app\data\Groceries_dataset2.csv'
+        data_filepath = r'ML_mini_projet\app\data\Groceries_dataset2.csv'
         st.session_state.data = load_data(data_filepath)
 except Exception as e:
     st.error(f"Error loading data: {e}")
