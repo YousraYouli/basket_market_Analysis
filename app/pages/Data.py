@@ -7,6 +7,13 @@ import warnings
 from wordcloud import WordCloud
 from mlxtend.preprocessing import TransactionEncoder
 
+# import matplotlib.pyplot as plt
+import path
+
+dir = path.Path(__file__).abspath()
+sys.append.path(dir.parent.parent)
+
+
 st.set_page_config(page_title='Data Preprocessing',
                    layout='centered',
                    initial_sidebar_state='expanded',
