@@ -22,7 +22,7 @@ def load_csv_data(path):
         except FileNotFoundError:
             st.error("Error: dataset not found. Please ensure the file is present in the 'data' folder.")
             return None 
-st.session_state.data = load_csv_data("data\\train_data.csv")
+st.session_state.train_data = load_csv_data("data\\train_data.csv")
 
 items_list = st.session_state.data.columns.tolist()
 
