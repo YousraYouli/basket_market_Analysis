@@ -1,5 +1,9 @@
 import streamlit as st
+<<<<<<< HEAD
 # import os 
+=======
+import os 
+>>>>>>> 36816ba9f4d7acc92a8c71e448ec8ec7142730e7
 
 st.set_page_config(page_title='home',
                    page_icon='👋',
@@ -26,7 +30,13 @@ st.markdown("""
 """, unsafe_allow_html=True
 )
 
+<<<<<<< HEAD
 
 
 # data_filepath = os.path.join('.', 'figures','1.png')
 st.image(r'C:\Users\Soso\Desktop\ML_miniprojet\ML_mini_projet\app\figures\1.png')
+=======
+data_filepath = os.path.join('.', 'figures','1.png')
+st.image(data_filepath)
+# st.image("C:\Users\Soso\Desktop\ML_miniprojet\ML_mini_projet\app\figures1.png")
+>>>>>>> 36816ba9f4d7acc92a8c71e448ec8ec7142730e7
