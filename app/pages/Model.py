@@ -12,6 +12,8 @@ st.set_page_config(page_title='Data Preprocessing',
 )
 
 tab1, tab2 = st.tabs(["Model rules", "Reommanded System"])
+
+current_dir = os.path.dirname(__file__)
 #----------------------------------------------------------------------------------------------------------------------------------------
 
 #load train data
@@ -22,10 +24,14 @@ def load_csv_data(path):
         except FileNotFoundError:
             st.error("Error: dataset not found. Please ensure the file is present in the 'data' folder.")
             return None 
-st.session_state.train_data = load_csv_data("data\\train_data.csv")
+
+
+data_filepath = os.path.join(current_dir, '..', 'data', 'train_data.csv')    
+st.session_state.train_data = load_csv_data(data_filepath)
+# st.session_state.train_data = load_csv_data("data\\train_data.csv")
 
 items_list = st.session_state.data.columns.tolist()
-current_dir = os.path.dirname(__file__)
+
 
 with tab1 :
     # App title
