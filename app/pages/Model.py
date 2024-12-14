@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 from mlxtend.frequent_patterns import association_rules
-
-
+import os
 
 
 st.set_page_config(page_title='Data Preprocessing',
@@ -12,6 +11,8 @@ st.set_page_config(page_title='Data Preprocessing',
 )
 
 tab1, tab2 = st.tabs(["Model rules", "Reommanded System"])
+
+current_dir = os.path.dirname(__file__)
 #----------------------------------------------------------------------------------------------------------------------------------------
 
 #load train data
@@ -22,9 +23,13 @@ def load_csv_data(path):
         except FileNotFoundError:
             st.error("Error: dataset not found. Please ensure the file is present in the 'data' folder.")
             return None 
-st.session_state.train_data = load_csv_data("data\\train_data.csv")
+
+data_filepath = os.path.join(current_dir, '..', 'data', 'train_data.csv')    
+st.session_state.train_data = load_csv_data(data_filepath)
+
 
 items_list = st.session_state.train_data.columns.tolist()
+
 
 
 with tab1 :
@@ -50,8 +55,8 @@ with tab1 :
     def load_model(path):
         model = pickle.load(open(path, 'rb'))
         return model
-
-    FPgrowth_model = load_model("data\\model.pkl")
+    model_filepath = os.path.join(current_dir, '..', 'data', 'model.pkl')
+    FPgrowth_model = load_model(model_filepath)
 
     frequent_itemsets = FPgrowth_model[FPgrowth_model['support'] >= min_support]
 

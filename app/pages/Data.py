@@ -8,10 +8,10 @@ from wordcloud import WordCloud
 from mlxtend.preprocessing import TransactionEncoder
 
 # import matplotlib.pyplot as plt
-import path
+# import path
 
-dir = path.Path(__file__).abspath()
-sys.append.path(dir.parent.parent)
+# dir = path.Path(__file__).abspath()
+# sys.append.path(dir.parent.parent)
 
 
 st.set_page_config(page_title='Data Preprocessing',
@@ -25,16 +25,18 @@ tab1, tab2 = st.tabs(["Data visualisation", "Data Cleaning"])
 def load_data(filepath):
     df = pd.read_csv(filepath)
     return df
-
+# Current script's directory
+current_dir = os.path.dirname(__file__)
+# Path to the dataset
+# dataset_path = os.path.join(current_dir, '..', 'data', 'Groceries_dataset2.csv')
 # Charger les données et les stocker dans session_state
 try:
     if "data" not in st.session_state:
-<<<<<<< HEAD
-        data_filepath = r'C:\Users\Soso\Desktop\ML_miniprojet\ML_mini_projet\app\data\Groceries_dataset2.csv'
-        # data_filepath = os.path.join('.', 'Groceries_dataset2.csv')
-=======
-        data_filepath = os.path.join('.', 'data', 'Groceries_dataset2.csv')
->>>>>>> 36816ba9f4d7acc92a8c71e448ec8ec7142730e7
+
+        # data_filepath = r'C:\Users\Soso\Desktop\ML_miniprojet\ML_mini_projet\app\data\Groceries_dataset2.csv'
+        data_filepath = os.path.join(current_dir, '..', 'data', 'Groceries_dataset2.csv')
+        # data_filepath = os.path.join('.', 'data', 'Groceries_dataset2.csv')
+
         st.session_state.data = load_data(data_filepath)
 except Exception as e:
     st.error(f"Error loading data: {e}")
