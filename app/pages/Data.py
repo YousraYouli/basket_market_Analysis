@@ -29,7 +29,7 @@ def load_data(filepath):
 # Charger les données et les stocker dans session_state
 try:
     if "data" not in st.session_state:
-        data_filepath = os.path.join('.', 'data', 'Groceries_dataset2.csv')
+        data_filepath = os.path.join('..', 'data', 'Groceries_dataset2.csv')
         st.session_state.data = load_data(data_filepath)
 except Exception as e:
     st.error(f"Error loading data: {e}")
