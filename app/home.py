@@ -31,6 +31,6 @@ st.markdown("""
 #          :blue[Apriori ,FP-GROWTH, ECLAT] and we had a diffrenet result , the best model
 #          using blue:[performance evaluation] is **XXX algorihtm** ''')
 
-data_filepath = os.path.join('.', 'figures','1.png')
-st.image(data_filepath)
-# st.image("C:\Users\Soso\Desktop\ML_miniprojet\ML_mini_projet\app\figures1.png")
+# data_filepath = os.path.join('.', 'figures','1.png')
+# st.image(data_filepath)
+st.image("ML_mini_projet\app\figures\1.png")
