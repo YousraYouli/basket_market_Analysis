@@ -33,4 +33,9 @@ st.markdown("""
 
 # data_filepath = os.path.join('.', 'figures','1.png')
 # st.image(data_filepath)
-st.image("ML_mini_projet/app/figures/1.png")
+# st.image("ML_mini_projet/app/figures/1.png")
+# Path to the image
+image_path = os.path.join('figures', '1.png')
+
+# Display the image
+st.image(image_path, caption="Leather Cutting Machine")
