@@ -33,4 +33,4 @@ st.markdown("""
 
 # data_filepath = os.path.join('.', 'figures','1.png')
 # st.image(data_filepath)
-st.image("ML_mini_projet\app\figures\1.png")
+st.image("ML_mini_projet/app/figures/1.png")
