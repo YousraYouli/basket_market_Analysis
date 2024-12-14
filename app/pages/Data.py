@@ -25,6 +25,7 @@ tab1, tab2 = st.tabs(["Data visualisation", "Data Cleaning"])
 def load_data(filepath):
     df = pd.read_csv(filepath)
     return df
+
 # Current script's directory
 current_dir = os.path.dirname(__file__)
 # Path to the dataset

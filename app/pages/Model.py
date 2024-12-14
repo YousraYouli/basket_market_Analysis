@@ -5,6 +5,7 @@ from mlxtend.frequent_patterns import association_rules
 import os
 
 
+
 st.set_page_config(page_title='Data Preprocessing',
                    layout='centered',
                    initial_sidebar_state='expanded',
@@ -23,6 +24,8 @@ def load_csv_data(path):
         except FileNotFoundError:
             st.error("Error: dataset not found. Please ensure the file is present in the 'data' folder.")
             return None 
+
+        
 
 data_filepath = os.path.join(current_dir, '..', 'data', 'train_data.csv')    
 st.session_state.train_data = load_csv_data(data_filepath)
@@ -55,8 +58,10 @@ with tab1 :
     def load_model(path):
         model = pickle.load(open(path, 'rb'))
         return model
+
     model_filepath = os.path.join(current_dir, '..', 'data', 'model.pkl')
     FPgrowth_model = load_model(model_filepath)
+
 
     frequent_itemsets = FPgrowth_model[FPgrowth_model['support'] >= min_support]
 

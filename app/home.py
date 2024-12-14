@@ -27,7 +27,6 @@ st.markdown("""
 """, unsafe_allow_html=True
 )
 
-
 current_dir = os.path.dirname(__file__)
 
 
@@ -37,5 +36,4 @@ if not os.path.exists(data_filepath):
     st.error(f"File not found: {data_filepath}")
 
 st.image(data_filepath)
-
 
