@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 from mlxtend.frequent_patterns import association_rules
-
+import os
 
 
 
@@ -25,7 +25,7 @@ def load_csv_data(path):
 st.session_state.train_data = load_csv_data("data\\train_data.csv")
 
 items_list = st.session_state.data.columns.tolist()
-
+current_dir = os.path.dirname(__file__)
 
 with tab1 :
     # App title
@@ -51,7 +51,9 @@ with tab1 :
         model = pickle.load(open(path, 'rb'))
         return model
 
-    FPgrowth_model = load_model("data\\model.pkl")
+    model_filepath = os.path.join(current_dir, '..', 'data', 'model.pkl')
+    FPgrowth_model = load_model(model_filepath)
+    # FPgrowth_model = load_model("data\\model.pkl")
 
     frequent_itemsets = FPgrowth_model[FPgrowth_model['support'] >= min_support]
 
