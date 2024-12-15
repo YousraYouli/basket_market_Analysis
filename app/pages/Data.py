@@ -15,6 +15,7 @@ from mlxtend.preprocessing import TransactionEncoder
 
 
 st.set_page_config(page_title='Data Preprocessing',
+                   page_icon='📊',
                    layout='centered',
                    initial_sidebar_state='expanded',
 )
@@ -47,7 +48,7 @@ except Exception as e:
 data = st.session_state.data
 
 # Sidebar Components
-st.sidebar.header("Visualization Data Settings")
+# st.sidebar.header("Visualization Data Settings")
 
 with tab1:
     st.header("Data Visualisation")
