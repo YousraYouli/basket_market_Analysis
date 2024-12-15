@@ -21,7 +21,7 @@ st.markdown("""
      you can find the data in the link : [Groceries dataset](https://www.kaggle.com/datasets/heeraldedhia/groceries-dataset) <br>
     credits for the team : <br>
             - MEFLAH Yousra <br>
-            - OUECHENE Hiba <br>
+            - OUECHENE HibaElrahmane <br>
             - BELHOUARI Noussaiba
 
 """, unsafe_allow_html=True
