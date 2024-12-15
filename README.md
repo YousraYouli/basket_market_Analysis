@@ -13,5 +13,5 @@ streamlit run home.py
 you can find dataSet here : 
 https://www.kaggle.com/datasets/heeraldedhia/groceries-dataset
 
-you can test the model from here : 
+you can test the model from here : https://mlminiprojet.streamlit.app/
 
