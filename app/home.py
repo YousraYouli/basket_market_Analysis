@@ -18,7 +18,7 @@ st.markdown (""" #### This is unsupervised algorithm to find hide patterns and r
 st.markdown(''' ####  we have tested the three algorithm of **Association Rule Mining** wich are :green[Apriori ,FP-GROWTH, ECLAT] and we had a diffrenet result , the best model using :green[performance evaluation] is :orange[FP-GROWTH algorihtm] 
              ''')
 st.markdown("""
-     you can find the data in the link : [Book Recommendation Dataset](https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset?resource=download&select=Books.csv) <br>
+     you can find the data in the link : [Groceries dataset](https://www.kaggle.com/datasets/heeraldedhia/groceries-dataset) <br>
     credits for the team : <br>
             - MEFLAH Yousra <br>
             - OUECHENE Hiba <br>
@@ -31,7 +31,7 @@ current_dir = os.path.dirname(__file__)
 
 
 # data_filepath = "app/figures/1.png"
-data_filepath = os.path.join(current_dir,'.','figures','1.png')
+data_filepath = os.path.join(current_dir,'.','figures','3.webp')
 if not os.path.exists(data_filepath):
     st.error(f"File not found: {data_filepath}")
 
